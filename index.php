@@ -26,7 +26,7 @@
     <?php _e('Sorry, no posts matched your criteria.'); ?>
   </p>
   <?php endif; ?>
-  <?php posts_nav_link(' ⏼ ', __('« Newer Posts'), __('Older Posts »')); ?>
+  <?php page_navi(); // use the page navi function ?>
 </section>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

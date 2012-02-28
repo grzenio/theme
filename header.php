@@ -9,9 +9,8 @@
 <title>
 <?php wp_title(); ?>
 </title>
-<?php wp_head(); ?>
 <meta name="viewport" content="width=device-width">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
+<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]--> 
@@ -35,7 +34,7 @@
     $images = array();
     foreach ( $query_images->posts as $image) {
 		if ($image->post_excerpt == "slider") {
-			echo "<li><img alt=\"\" src=\"".$image->guid."\"></li>";
+			echo "<li><img alt=\"".$image->post_content."\" src=\"".$image->guid."\"></li>\n";
 		} else {};
     }
     ?>

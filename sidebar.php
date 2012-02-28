@@ -1,4 +1,4 @@
 <aside>
-<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar() ) : else : ?>
-<?php endif; ?>
+<?php get_search_form(); ?>
+<?php dynamic_sidebar( 'grzenio-Sidebar' ); ?>
 </aside>

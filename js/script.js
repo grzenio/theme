@@ -2,7 +2,15 @@
 
 */
 
-
+Modernizr.load([
+	{
+    // Let's see if we need to load selectivizr
+    test : Modernizr.borderradius,
+    // Modernizr.load loads selectivizr and Respond.js for IE6-8
+    nope : ['libs/selectivizr-min.js'],
+	nope : ['libs/respond-min.js']
+	}
+]);
 
 
 $(document).ready( function() {
